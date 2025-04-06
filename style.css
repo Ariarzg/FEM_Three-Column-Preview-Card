@@ -91,6 +91,9 @@ button {
   border-radius: 50vh;
   padding: 0.8em 2em;
 
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
   margin-top: 4rem;
 
   &:hover {
