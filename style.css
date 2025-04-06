@@ -1,0 +1,101 @@
+:root {
+  --clr-primary-orange: rgb(227, 136, 38);
+  --clr-primary-cyan-500: rgb(0, 105, 112);
+  --clr-primary-cyan-700: rgb(0, 66, 65);
+
+  --clr-neutral-gray-100: rgb(242, 242, 242);
+
+  --clr-neutral-transparency: 0.75;
+
+  --f-paragraph: "Lexend Deca", sans-serif;
+  --f-heading: "Big Shoulders", sans-serif;
+
+  --fw-paragraph: 400;
+  --fw-heading: 700;
+
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.755rem;
+  --fs-800: 2rem;
+}
+
+* {
+  padding: 0;
+}
+
+body {
+  background: var(--clr-neutral-gray-100);
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  padding: 3rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 56.25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  font-family: var(--f-paragraph);
+}
+
+.card {
+  background: var(--item-color);
+  flex-basis: 18.75rem;
+  flex-grow: 1;
+
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+.card[data-item-type="sedan"] {
+  --item-color: var(--clr-primary-orange);
+}
+.card[data-item-type="suv"] {
+  --item-color: var(--clr-primary-cyan-500);
+}
+.card[data-item-type="luxury"] {
+  --item-color: var(--clr-primary-cyan-700);
+}
+
+img {
+  width: 4rem;
+}
+
+h2 {
+  font-family: var(--f-heading);
+  font-weight: var(--fw-heading);
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  color: var(--clr-neutral-gray-100);
+}
+
+p {
+  font-weight: var(--fw-paragraph);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, var(--clr-neutral-transparency));
+}
+
+button {
+  background: var(--clr-neutral-gray-100);
+  color: var(--item-color);
+  border: solid 0.125rem transparent;
+  border-radius: 50vh;
+  padding: 0.8em 2em;
+
+  margin-top: 4rem;
+
+  &:hover {
+    background: transparent;
+    color: var(--clr-neutral-gray-100);
+    border: solid 0.125rem var(--clr-neutral-gray-100);
+  }
+}
